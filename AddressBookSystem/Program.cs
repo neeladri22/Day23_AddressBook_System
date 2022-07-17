@@ -103,7 +103,7 @@ namespace AddressBookSystem
                 }
 
             }
-            */
+           
 
             //UC10 Count by City or state
             while (true)
@@ -128,6 +128,36 @@ namespace AddressBookSystem
                     case 4:
                         records.CheckByState();
                         break;
+                    default:
+                        Console.WriteLine("Pleasee select valid input");
+                        break;
+
+                }
+
+            }
+             */
+
+            //UC11 Sorted list in alphabet order
+            while (true)
+            {
+                Console.WriteLine("\nEnter 1 to Add person in AddressBook");
+                Console.WriteLine("Enter 2 to Display all Contacts AdressBook");
+                Console.WriteLine("Enter 3 to Display the Sorted List");
+
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        records.AddRecord();
+                        break;
+                    case 2:
+                        records.ToPrint();
+                        break;
+                    case 3:
+                        records.SortContacts();
+                        break;
+
                     default:
                         Console.WriteLine("Pleasee select valid input");
                         break;
